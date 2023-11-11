@@ -39,12 +39,12 @@ class AppDelegate: NSObject, NSApplicationDelegate{
         guard let event = NSApp.currentEvent else { return }
                 if event.type == NSEvent.EventType.rightMouseUp {
                     let menu = NSMenu()
-                    menu.addItem(
-                        withTitle: NSLocalizedString("Preference", comment: "Show preferences window"),
-                        action: #selector(openPreferencesWindow),
-                        keyEquivalent: ""
-                    )
-                    menu.addItem(.separator())
+//                    menu.addItem(
+//                        withTitle: NSLocalizedString("Preference", comment: "Show preferences window"),
+//                        action: #selector(openPreferencesWindow),
+//                        keyEquivalent: ""
+//                    )
+//                    menu.addItem(.separator())
                     menu.addItem(
                         withTitle: NSLocalizedString("Quit", comment: "Quit app"),
                         action: #selector(terminate),
@@ -55,8 +55,8 @@ class AppDelegate: NSObject, NSApplicationDelegate{
                 }
         
         // NSPopoverのサイズを調整
-        let popoverWidth: CGFloat = 200
-        let popoverHeight: CGFloat = 250
+        let popoverWidth: CGFloat =     180
+        let popoverHeight: CGFloat = 200
         
         if popover == nil {
             let popover = NSPopover() // ↓ を追加
