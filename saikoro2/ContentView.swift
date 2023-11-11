@@ -35,7 +35,7 @@ struct ContentView: View {
                         value: $sliderValue,
                         in: 1...10
                     )
-                    .tint(.green)//green
+                    .tint(.green)//green緑です
                         .padding(10)
                 }
                 .frame(maxWidth: .infinity, maxHeight: .infinity)
