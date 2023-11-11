@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE347ABE2B00A2F40041343F /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE347ABD2B00A2F40041343F /* SwiftUIView.swift */; };
+		CE347AC02B00A3E00041343F /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE347ABF2B00A3E00041343F /* TimerView.swift */; };
 		CE81681D2AFD038100EBE091 /* saikoro2App.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81681C2AFD038100EBE091 /* saikoro2App.swift */; };
-		CE81681F2AFD038100EBE091 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81681E2AFD038100EBE091 /* ContentView.swift */; };
+		CE81681F2AFD038100EBE091 /* DiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81681E2AFD038100EBE091 /* DiceView.swift */; };
 		CE8168252AFD038200EBE091 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE8168242AFD038200EBE091 /* Preview Assets.xcassets */; };
 		CE81682F2AFD038200EBE091 /* saikoro2Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE81682E2AFD038200EBE091 /* saikoro2Tests.swift */; };
 		CE8168392AFD038200EBE091 /* saikoro2UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE8168382AFD038200EBE091 /* saikoro2UITests.swift */; };
@@ -34,9 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CE347ABD2B00A2F40041343F /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
+		CE347ABF2B00A3E00041343F /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		CE8168192AFD038100EBE091 /* saikoro2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = saikoro2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE81681C2AFD038100EBE091 /* saikoro2App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = saikoro2App.swift; sourceTree = "<group>"; };
-		CE81681E2AFD038100EBE091 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		CE81681E2AFD038100EBE091 /* DiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiceView.swift; sourceTree = "<group>"; };
 		CE8168202AFD038200EBE091 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE8168222AFD038200EBE091 /* saikoro2.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = saikoro2.entitlements; sourceTree = "<group>"; };
 		CE8168242AFD038200EBE091 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -96,7 +100,9 @@
 			isa = PBXGroup;
 			children = (
 				CE81681C2AFD038100EBE091 /* saikoro2App.swift */,
-				CE81681E2AFD038100EBE091 /* ContentView.swift */,
+				CE81681E2AFD038100EBE091 /* DiceView.swift */,
+				CE347ABF2B00A3E00041343F /* TimerView.swift */,
+				CE347ABD2B00A2F40041343F /* SwiftUIView.swift */,
 				CE8168202AFD038200EBE091 /* Assets.xcassets */,
 				CE8168222AFD038200EBE091 /* saikoro2.entitlements */,
 				CE8168232AFD038200EBE091 /* Preview Content */,
@@ -259,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE81681F2AFD038100EBE091 /* ContentView.swift in Sources */,
+				CE81681F2AFD038100EBE091 /* DiceView.swift in Sources */,
 				CE81681D2AFD038100EBE091 /* saikoro2App.swift in Sources */,
+				CE347AC02B00A3E00041343F /* TimerView.swift in Sources */,
+				CE347ABE2B00A2F40041343F /* SwiftUIView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

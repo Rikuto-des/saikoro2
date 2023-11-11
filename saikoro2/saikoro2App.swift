@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import AppKit
 
 @main
 struct saikoro2App: App {
@@ -14,7 +15,7 @@ struct saikoro2App: App {
     #endif
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            SwiftUIView()
         }
     }
 }
@@ -29,10 +30,10 @@ class AppDelegate: NSObject, NSApplicationDelegate{
         NSApp.terminate(self)
     }
 
-    @objc func openPreferencesWindow() {
-        
-        
-    }
+//    @objc func openPreferencesWindow() {
+//
+//
+//    }
 
     @objc func showPopover(_ sender: NSStatusBarButton) {
         
@@ -55,8 +56,8 @@ class AppDelegate: NSObject, NSApplicationDelegate{
                 }
         
         // NSPopoverのサイズを調整
-        let popoverWidth: CGFloat =     180
-        let popoverHeight: CGFloat = 200
+        let popoverWidth: CGFloat =     250
+        let popoverHeight: CGFloat = 300
         
         if popover == nil {
             let popover = NSPopover() // ↓ を追加
@@ -64,7 +65,7 @@ class AppDelegate: NSObject, NSApplicationDelegate{
             popover.behavior = .transient
             popover.animates = false
             self.popover = popover
-            popover.contentViewController = NSHostingController(rootView: ContentView())
+            popover.contentViewController = NSHostingController(rootView:SwiftUIView())
         }
         
         
@@ -78,18 +79,30 @@ class AppDelegate: NSObject, NSApplicationDelegate{
     func applicationDidFinishLaunching(_ notification: Notification) {
         statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
         let button = statusItem.button!
-        let customImage = NSImage(imageLiteralResourceName: "menuicon") // "imageName" は画像ファイルの名前に置き換える
 
-        button.image = customImage
+        // メニューバーの外観が明るいか暗いかを判定
+        let isDarkMode = NSApp.effectiveAppearance.bestMatch(from: [.darkAqua, .aqua]) == .darkAqua
+
+        if isDarkMode {
+            // メニューバーが暗い場合のアイコン
+            button.image = NSImage(named: "menuiconDark")
+        } else {
+            // メニューバーが明るい場合のアイコン
+            button.image = NSImage(named: "menuicon")
+        }
+        
+        // テンプレートとして扱われるように設定
+        button.image?.isTemplate = true
+
         button.action = #selector(showPopover)
-        
+
         NSApp.setActivationPolicy(.accessory)
-        
-        button.action = #selector(showPopover) // ↓ を追加
+
+        button.action = #selector(showPopover)
         button.sendAction(on: [.leftMouseUp, .rightMouseUp])
         NSApp.windows.first?.orderOut(nil)
-
-
     }
+
+
 }
 #endif
